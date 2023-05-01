@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+    nginx:
+        container_name: nginx
+        image: jeevanchiru/nginx:1
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: always
+        ports:
+            - "8080:8080"
